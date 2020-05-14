@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Conversor de Temperatura</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+
+</head>
+<body>
+	<header id="cabecalho">
+		<h1>Conversão de Temperaturas</h1>
+	</header>
+     
+     <!-- Conteúdo do site  -->
+	<section id="conteudo">
+	
+		<p><b>     Bem vindo ao conversor de temperatura. Digite uma temperatura e descubra qual será nas outras medidas. </p>
+
+     <table>
+			<tr>
+				<td>Celsius</td>
+				<td><input type="number" id="celsius"></td>
+			</tr>
+			<tr>
+				<td>Fahrenheit</td>
+				<td><input type="number" id="fahrenheit"></td>
+			</tr>
+			<tr>
+				<td>Kelvin</td>
+				<td><input type="number" id="kelvin"></td>
+			</tr>
+		</table>
+		<button id="converter">Converter</button>
+		<button id="limpar">Limpar</button>
+       <script type="text/javascript">
+		var botao = document.getElementById('converter');
+		botao.onclick = function(){
+			var celsius = document.getElementById('celsius').value;
+			var fahrenheit = document.getElementById('fahrenheit').value;
+			var kelvin = document.getElementById('kelvin').value;
+			if(celsius!=="" ){
+				document.getElementById('fahrenheit').value = (9*parseFloat(celsius/5)+32);
+				document.getElementById('kelvin').value = (parseFloat(celsius)+273.15);
+			}else if (fahrenheit!==""){
+				document.getElementById('celsius').value = (5*parseFloat(fahrenheit-32)/9);
+				document.getElementById('kelvin').value = ((parseFloat(fahrenheit)-32)*(5/9)+273.15);
+			}else if(kelvin!==""){
+				document.getElementById('celsius').value = (parseFloat(kelvin) - 273.15);
+				document.getElementById('fahrenheit').value = ((parseFloat(kelvin)-273.15)*(9/5)+32);
+			}
+		}
+		var limpar = document.getElementById('limpar');
+		limpar.onclick = function(){
+			document.getElementById('celsius').value = "";
+			document.getElementById('fahrenheit').value = "";
+			document.getElementById('kelvin').value = "";
+		}
+	</script>
+
+    <!-- Rodapé do site -->
+	<footer id="rodape">
+		<h3>Contato</h3>
+		<address>E-mail: <a href="mailto:fabiodosantosdesousa@gmail.com">Fábio dos Santos de Sousa</a></address>
+		<address>Fone: <a href="tel:+63 99223-5803">(63) 9 9223-5803</a></address>
+		<address>Social: <a href="http://instagram.com/fabiodosantosdesousa">@fabiodosantosdesousaa</a></address>
+	</footer>
+		
+    
+</body>
+</html>

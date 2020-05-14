@@ -1,0 +1,31 @@
+body{
+	margin:0 auto; /*define margens*/
+	font-family: Helvetica, Arial;
+
+	max-width: 980px; /*largura máxima do conteúdo do body*/
+	background-color: #B0E0E6;
+}
+#cabecalho{
+	width:auto; /*largura*/
+	height:80px; /*altura*/
+	line-height:80px; /*alinha horizontalmente*/
+	text-align: center; /*centraliza o texto*/ 
+	background-color: #BDB76B; /*cor de fundo*/
+	color: #1C1C1C;
+	font-family: 'Indie Flower', 'cursive'; /*tipo da fonte*/
+}
+
+#conteudo{
+	width: auto;
+	height:80%;
+	padding: auto;
+	background-color: #ffffff;
+}
+#rodape{
+    
+	width: auto;
+	height: auto;
+	padding: 20px;
+	background-color: #BDB76B;
+	margin-top: 25%;
+}
